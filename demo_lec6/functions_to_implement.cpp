@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -20,7 +21,14 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b);
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
 // (16 = 2 * 2 * 2 * 2 * 1 -> 1, 7 -> 7, 26 = 2 * 13 -> 13, 52 = 2 * 2 * 13 -> 13)
-int RemoveTwos(int original);
+int RemoveTwos(int original){
+	int remainder = original;
+	while(remainder % 2 == 0)
+	{
+		remainder = remainder/2;
+	}
+	return remainder;
+}
 
 // takes a vector of integers and removes all elements evenly divisible by the passed in int
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
@@ -54,12 +62,7 @@ std::vector<int> SquaresUntil(int n);
 int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
-int Factorial(int n){
-	if(n>1)
-		return n*Factorial(n-1);
-	else
-		return 1;
-}
+int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
 int Sign(int num);
@@ -104,13 +107,7 @@ double Sign(double num);
 
 
 // adds n to each element of the vector
-std::vector<int> AddN(std::vector<int> v, int n)
-{
-	for(int i=0;i<(int)v.size();i++){
-		v[i]+=n;
-	}
-	return v;
-}
+std::vector<int> AddN(std::vector<int>, int n);
 
 // adds n to each element of the vector
 std::vector<double> AddN(std::vector<double>, double n);
@@ -125,11 +122,8 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
 
-// int main(){
-// 	std::cout << Factorial (5) <<std::endl;
-// 	std::vector<int> v{1,2,3};
-// 	std::vector<int> res = AddN(v, 5);
-// 	for(int i=0;i<res.size();i++){
-// 		std::cout<<res[i]<<" ";
-// 	}
-// }
+int main()
+{
+	std::cout << RemoveTwos(49);
+	return 0;
+}
