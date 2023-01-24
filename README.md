@@ -18,5 +18,4 @@ Adding text to simulate text by another team member.
 Adding text on Feb 1, 2022.
 
 Adding text locally.
-Adding text for merge conflict.
 
