@@ -1,6 +1,5 @@
 # CSCI3010-demo-Lec6
 
-[![Build Status](https://app.travis-ci.com/SreeshaNath/CSCI3010-demo-Lec6.svg?branch=master)](https://app.travis-ci.com/SreeshaNath/CSCI3010-demo-Lec6)
 
 This is some random text.
 
